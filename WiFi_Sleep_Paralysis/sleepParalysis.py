@@ -1,9 +1,9 @@
 # Made in Australia
 # Battery powered wifi devices sleep which can prevent them showing up on a WiFi scan
-# Some devices use the TIM compoment of the non encrypted management frame to wake the device up, if the TIM
+# Some devices use the TIM component of the non encrypted management frame to wake the device up, if the TIM
 # shows there is data waiting for it, it will wake up sending an ACK or NULL frame and await the data
-# The Beacon frame and TIM can be spoofed to force a device to wake up and repond with NULL or ACk frames causing it toshow up on a scan
-# If the device is continually made to repond its battery life may be adversley affected as it can no longer sleep........
+# The Beacon frame and TIM can be spoofed to force a device to wake up and respond with NULL or ACk frames causing it to show up on a scan
+# If the device is continually made to respond its battery life may be adversely affected as it can no longer sleep........
 #
 #
 # Changelog
@@ -14,7 +14,7 @@ from scapy.all import Dot11, Dot11Beacon, Dot11Elt, RadioTap, sendp, hexdump
 
 # README.....
 #
-# This script will need to be run as SUDO so the packets can be injected, change the appropriate paramaters at
+# This script will need to be run as SUDO so the packets can be injected, change the appropriate parameters at
 # the bottom of this script prior to running it.
 # You need to ensure your wifi adapter is in monitor mode / and is capable of supporting frame injection (sudo aireplay-ng --test wlan0)
 # The MAC of your adapter needs to be changed to match the target AP or frames will be ignored by the target device
@@ -104,11 +104,11 @@ def main():
 
     # Wakes up devices with AID 1 and 2 causes continual ACK emission
     # Bitmask 0000 0110 (0x06)
-    # This will cause them to apepar on a network scan
+    # This will cause them to appear on a network scan
     # tim_data=b"\x0b\x21\x00\x06"
 
     # Causes device 0x01 to emit continual Ack frames
-    # bitmask 0000 0010 (0x02)
+    # Bitmask 0000 0010 (0x02)
     # tim_data = b"\x0b\x21\x00\x02"
 
     # Causes device 0x02 to emit continual Ack frames
@@ -118,7 +118,7 @@ def main():
     # Parameters to change
 
     channel = 6  # Target Channel here
-    bssid = "A0:000:00:00:00:00"  # target BSSID
+    bssid = "A0:00:00:00:00:00"  # target BSSID
     ssid = "NETGEAR00"  # Target SSID
 
     forged_frame = tim_packet(ssid, bssid, tim_data, channel)
