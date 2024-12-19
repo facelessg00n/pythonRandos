@@ -22,12 +22,13 @@ from scapy.all import Dot11, Dot11Beacon, Dot11Elt, RadioTap, sendp, hexdump
 # sudo airmon-ng check kill
 # sudo airmon-ng start wlan0
 # sudo ifconfig wlan0mon down
-# sudo macchanger -m A0:04:60:DB:16:52 wlan0mon
+# IMPORTANT - You need to make sure you also change the MAC oc your adapter.
+# sudo macchanger -m A0:00:00:00:00:00 wlan0mon
 # sudo ifconfig wlan0mon up
 #
 #
 # Troubleshooting
-# Monitor transmitted packets with wireshark and make sure your channel and MAC settings have changed correctly
+# Monitor transmitted packets with Wireshark and make sure your channel and MAC settings have changed correctly
 # This mismatch causes most of the issues
 #
 # TIM Construction guide
