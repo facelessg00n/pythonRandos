@@ -1,0 +1,9 @@
+gitdb==4.0.12
+GitPython==3.1.44
+grpcio==1.70.0
+grpcio-tools==1.70.0
+importlib_metadata==8.6.1
+littlefs-python==0.13.1
+protobuf==5.29.3
+smmap==5.0.2
+zipp==3.21.0

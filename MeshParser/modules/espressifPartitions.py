@@ -1,0 +1,35 @@
+# Reference docs
+# https://github.com/espressif/esp-idf/blob/v5.0/components/esp_partition/include/esp_partition.h
+# https://fossies.org/linux/file/magic/Magdir/firmware
+
+espressifPartitions = {
+    0x00: "factory app",
+    0x10: "OTA_0 app",
+    0x11: "OTA_1 app",
+    0x12: "OTA_2 app",
+    0x13: "OTA_3 app",
+    0x14: "OTA_4 app",
+    0x15: "OTA_5 app",
+    0x16: "OTA_6 app",
+    0x17: "OTA_7 app",
+    0x18: "OTA_8 app",
+    0x19: "OTA_9 app",
+    0x1A: "OTA_10 app",
+    0x1B: "OTA_11 app",
+    0x1C: "OTA_12 app",
+    0x1D: "OTA_13 app",
+    0x1E: "OTA_14 app",
+    0x1F: "OTA_15 app",
+    0x20: "test app",
+    0x00: "OTA selection data",
+    0x01: "PHY init data",
+    0x02: "NVS data",
+    0x03: "coredump data",
+    0x04: "NVS keys",
+    0x05: "emulated eFuse data",
+    0x06: "undefined data",
+    0x80: "ESPHTTPD partition",
+    0x81: "FAT partition",
+    0x82: "SPIFFS partition",
+    0xFF: "any data",
+}
